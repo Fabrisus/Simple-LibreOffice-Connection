@@ -11,7 +11,6 @@ package LibreOffices;
 */
 
 
-import java.io.*;
 import java.nio.file.*;
 
 import com.sun.star.datatransfer.*;

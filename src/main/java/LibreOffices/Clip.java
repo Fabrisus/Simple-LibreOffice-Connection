@@ -29,18 +29,10 @@ package LibreOffices;
 */
 
 
-import java.io.*;
 import java.awt.image.*;
-import javax.imageio.*;
-
-
-import com.sun.star.uno.*;
-import com.sun.star.frame.*;
-import com.sun.star.text.*;
 
 import com.sun.star.datatransfer.*;
 import com.sun.star.datatransfer.clipboard.*;
-import com.sun.star.lang.EventObject;
 
 
 

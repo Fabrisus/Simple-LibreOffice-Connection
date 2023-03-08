@@ -9,8 +9,6 @@ package LibreOffices;
 
 import java.io.*;
 import java.util.*;
-import java.awt.*;
-import java.awt.image.*;
 import java.awt.datatransfer.*;
 
 
@@ -18,10 +16,10 @@ import java.awt.datatransfer.*;
 public class JListTransferable implements Transferable 
 {
 
-  private ArrayList vals;    // no use made of generics
+  private ArrayList<?> vals;    // no use made of generics
   private DataFlavor listDF;
 
-  public JListTransferable(ArrayList vals) 
+  public JListTransferable(ArrayList<?> vals) 
   {  this.vals = vals;  
      listDF = new DataFlavor(ArrayList.class, "List");
   }

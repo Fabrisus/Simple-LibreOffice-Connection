@@ -14,7 +14,6 @@ package LibreOffices;
 */
 
 import java.io.*;
-import java.awt.print.*;
 import java.util.*;
 
 import javax.print.*;
@@ -99,7 +98,7 @@ public class JPrint
   }  // end of listService()
 
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@SuppressWarnings({ "unchecked" })
   public static ArrayList<NamedAttribute> getAttributes(PrintService ps) 
   // http://stackoverflow.com/questions/5567709/extended-printer-information-in-java
   // https://docs.oracle.com/javase/7/docs/api/index.html?javax/print/DocFlavor.html

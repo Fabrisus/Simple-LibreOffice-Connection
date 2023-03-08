@@ -31,12 +31,10 @@ package LibreOffices;
 
 
 import javax.swing.*;
-import java.awt.event.*;
 import java.awt.*;
 
 import com.sun.star.beans.*;
 import com.sun.star.lang.*;
-import com.sun.star.uno.*;
 import com.sun.star.frame.*;
 import com.sun.star.awt.*;
 
@@ -48,6 +46,8 @@ import com.sun.star.comp.beans.*;
 public class OBeanPanel extends JPanel
                   implements XMouseClickHandler, XKeyHandler
 {
+	
+  private static final long serialVersionUID = 1493106103233644537L;
   private int pWidth, pHeight;    // of panel
 
   private OOoBean oob = null;

@@ -16,10 +16,8 @@ import java.util.ArrayList;
 
 import com.sun.star.beans.*;
 import com.sun.star.container.*;
-import com.sun.star.frame.*;
 import com.sun.star.lang.*;
 import com.sun.star.uno.*;
-import com.sun.star.util.*;
 import com.sun.star.drawing.*;
 import com.sun.star.awt.*;
 import com.sun.star.text.*;
@@ -31,7 +29,6 @@ import com.sun.star.uno.Exception;
 import com.sun.star.sdb.*;
 
 import com.sun.star.form.*;
-import com.sun.star.form.XLoadable;
 
 import com.sun.star.script.*;
 
@@ -773,7 +770,7 @@ public class Forms
       colProps.setPropertyValue("Label", dataField);
       colProps.setPropertyValue("Name", dataField);
       if (width > 0)
-        colProps.setPropertyValue("Width", new Integer(width * 10));
+        colProps.setPropertyValue("Width", Integer.valueOf(width * 10));
       
       // add properties column to container
       colContainer.insertByIndex(colContainer.getCount(), colProps);

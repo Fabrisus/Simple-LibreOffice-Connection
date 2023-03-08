@@ -17,9 +17,7 @@ import LibreOffices.Calc;
 import LibreOffices.GUI;
 import LibreOffices.Write;
 import LibreOffices.Props;
-import com.sun.star.lang.*;
 import com.sun.star.frame.*;
-import com.sun.star.beans.*;
 
 import com.sun.star.sheet.*;
 import com.sun.star.table.*;

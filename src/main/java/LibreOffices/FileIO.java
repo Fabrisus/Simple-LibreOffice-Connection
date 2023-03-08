@@ -446,8 +446,7 @@ public class FileIO
     DateFormat df= DateFormat.getDateInstance();   // date format
     DateFormat tf= DateFormat.getTimeInstance();   // time format
     tf.setTimeZone( TimeZone.getDefault() );
-    try {
-      ZipFile zfile = new ZipFile(fnm);
+    try (ZipFile zfile = new ZipFile(fnm)) {
       System.out.println("Listing of " + zfile.getName() + ":");
       System.out.println("Raw Size    Size     Date        Time         Name");
       System.out.println("--------  -------  -------      -------      --------");
@@ -472,7 +471,7 @@ public class FileIO
   private static String padSpaces(long l, int width)
   // Used to print a long integer using a specific width
   {
-     String s = new Long(l).toString();
+     String s = Long.valueOf(l).toString();
      while (s.length() < width)
         s += " ";
      return s;

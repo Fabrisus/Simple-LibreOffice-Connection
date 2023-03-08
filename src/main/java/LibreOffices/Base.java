@@ -338,7 +338,6 @@ public class Base
 
     try { 
       XStatement statement = conn.createStatement();
-      XPropertySet xProp = Lo.qi(XPropertySet.class, statement);
       XResultSet rs = statement.executeQuery(query);
       System.out.println("Processed \"" + query + "\": " + (rs != null));
       return rs;
@@ -910,7 +909,7 @@ public class Base
     try {
       ZipFile zipFile = new ZipFile(fnm);
       // search through file entries in the zipfile
-      Enumeration zipEntries = zipFile.entries();
+      Enumeration<?> zipEntries = zipFile.entries();
       while (zipEntries.hasMoreElements()) {
         ZipEntry zipEntry = (ZipEntry) zipEntries.nextElement();
         if (zipEntry.getName().startsWith("content.xml"))
@@ -1087,7 +1086,7 @@ public class Base
     ArrayList<String> dbFnms = new ArrayList<String>();
     try {
       ZipFile zipFile = new ZipFile(fnm);
-      Enumeration zipEntries = zipFile.entries();
+      Enumeration<?> zipEntries = zipFile.entries();
       while (zipEntries.hasMoreElements()) {
         ZipEntry zipEntry = (ZipEntry) zipEntries.nextElement();
 

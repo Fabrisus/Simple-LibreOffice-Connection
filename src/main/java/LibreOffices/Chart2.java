@@ -22,20 +22,12 @@ package LibreOffices;
 */
 
 
-import java.awt.Point;
 import java.util.*;
 import java.awt.image.*;
 
 
-import com.sun.star.uno.*;
 import com.sun.star.beans.*;
-import com.sun.star.comp.helper.*;
-import com.sun.star.frame.XController;
-import com.sun.star.frame.XFrame;
-import com.sun.star.frame.XModel;
-import com.sun.star.bridge.*;
 import com.sun.star.lang.*;
-import com.sun.star.text.*;
 
 import com.sun.star.awt.*;
 import com.sun.star.util.*;
@@ -44,7 +36,6 @@ import com.sun.star.document.*;
 import com.sun.star.container.*;
 import com.sun.star.graphic.*;
 import com.sun.star.sheet.*;
-import com.sun.star.style.*;
 import com.sun.star.table.*;
 import com.sun.star.embed.*;
 import com.sun.star.view.*;
@@ -56,7 +47,6 @@ import com.sun.star.chart.ErrorBarStyle;
 import com.sun.star.chart.ChartDataRowSource;
 
 import com.sun.star.uno.Exception;
-import com.sun.star.io.IOException;
 
 
 public class Chart2
@@ -817,7 +807,7 @@ public class Chart2
     Object[] valsSeq = dataSeqs[seqIdx].getValues().getData();
     double[] vals = new double[valsSeq.length];
     for (int i=0; i < valsSeq.length; i++)
-       vals[i] = new Double(valsSeq[i].toString()); 
+       vals[i] = Double.valueOf(valsSeq[i].toString()).doubleValue(); 
     return vals;
   }  // end of getChartData()
 

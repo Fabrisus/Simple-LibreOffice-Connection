@@ -14,11 +14,7 @@ package LibreOffices;
 
 
 import com.sun.star.beans.*;
-import com.sun.star.lang.*;
-import com.sun.star.uno.*;
 import com.sun.star.awt.*;
-
-import com.sun.star.document.*;
 import com.sun.star.view.*;
 
 // import com.sun.star.uno.Exception;

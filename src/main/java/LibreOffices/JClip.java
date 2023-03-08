@@ -153,17 +153,17 @@ public class JClip
 
 
 
-  public static boolean setList(ArrayList vals)
+  public static boolean setList(ArrayList<?> vals)
   {  return addContents(new JListTransferable(vals));  }
 
 
 
-  public static ArrayList getList()
+  public static ArrayList<?> getList()
   {
     Transferable trf = getClip().getContents(null);
     if (trf != null && trf.isDataFlavorSupported(LIST_DF)) {
       try {   // unchecked cast
-        return (ArrayList) trf.getTransferData(LIST_DF);
+        return (ArrayList<?>) trf.getTransferData(LIST_DF);
       } 
       catch (Exception e) 
       {  System.out.println(e); }

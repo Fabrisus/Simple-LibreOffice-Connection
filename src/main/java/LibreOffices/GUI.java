@@ -23,7 +23,6 @@ import javax.swing.*;
 
 import com.sun.star.beans.*;
 import com.sun.star.lang.*;
-import com.sun.star.uno.*;
 import com.sun.star.frame.*;
 
 import com.sun.star.awt.*;
@@ -34,7 +33,6 @@ import com.sun.star.accessibility.*;
 import com.sun.star.graphic.*;
 
 import com.sun.star.uno.Exception;
-import com.sun.star.io.IOException;
 
 
 

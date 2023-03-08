@@ -14,9 +14,7 @@ package LibreOffices;
    See JImageTransferable for a non-Office, Java version.
 */
 
-import java.io.*;
 import java.awt.image.*;
-import javax.imageio.*;
 
 import com.sun.star.datatransfer.*;
 import com.sun.star.uno.*;

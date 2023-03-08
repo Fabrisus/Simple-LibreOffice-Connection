@@ -10,7 +10,6 @@ package LibreOffices;
                      freedesktop/libreoffice/qadevOOo/runner/util/
 */
 
-import com.sun.star.uno.*;
 import com.sun.star.registry.*;
 
 

@@ -40,7 +40,6 @@ import com.sun.star.util.*;
 import com.sun.star.deployment.*;
 
 import com.sun.star.uno.Exception;
-import com.sun.star.io.IOException;
 import com.sun.star.lang.IllegalArgumentException;
 
 

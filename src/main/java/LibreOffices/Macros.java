@@ -16,22 +16,17 @@ package LibreOffices;
 */
 
 
-import java.io.*;
 import java.util.*;
-
-import com.sun.star.lang.*;
 import com.sun.star.container.*;
 import com.sun.star.uno.*;
 import com.sun.star.beans.*;
 import com.sun.star.frame.*;
 import com.sun.star.document.*;
 
-import com.sun.star.script.*;
 import com.sun.star.script.browse.*;
 import com.sun.star.script.provider.*;
 
 import com.sun.star.uno.Exception;
-import com.sun.star.io.IOException;
 
 
 

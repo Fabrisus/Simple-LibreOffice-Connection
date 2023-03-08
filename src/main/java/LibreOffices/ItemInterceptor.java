@@ -13,8 +13,6 @@ package LibreOffices;
      https://forum.openoffice.org/en/forum/viewtopic.php?f=25&t=44291
 */
 
-import com.sun.star.uno.*;
-import com.sun.star.lang.*;
 import com.sun.star.frame.*;
 import com.sun.star.beans.*;
 import com.sun.star.util.*;

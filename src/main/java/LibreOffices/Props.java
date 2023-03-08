@@ -15,19 +15,14 @@ package LibreOffices;
 */
 
 
-import java.io.*;
 import java.util.*;
 
 import com.sun.star.beans.*;
-import com.sun.star.uno.*;
-import com.sun.star.awt.*;
-import com.sun.star.util.*;
 import com.sun.star.document.*;
 import com.sun.star.container.*;
 import com.sun.star.ui.*;
 
 import com.sun.star.uno.Exception;
-import com.sun.star.io.IOException;
 
 
 public class Props

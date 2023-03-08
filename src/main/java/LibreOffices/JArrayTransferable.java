@@ -10,8 +10,6 @@ package LibreOffices;
 */
 
 import java.io.*;
-import java.awt.*;
-import java.awt.image.*;
 import java.awt.datatransfer.*;
 
 

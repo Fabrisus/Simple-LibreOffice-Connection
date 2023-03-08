@@ -26,8 +26,6 @@ import com.sun.star.awt.*;
 import com.sun.star.beans.*;
 import com.sun.star.container.*;
 import com.sun.star.lang.*;
-import com.sun.star.uno.*;
-import com.sun.star.frame.*;
 
 import com.sun.star.uno.Exception;
 
@@ -196,7 +194,7 @@ public class Dialogs
 
       props.setPropertyValue("Step", 0);
       props.setPropertyValue("Moveable", true);
-      props.setPropertyValue("TabIndex", new Short((short) 0));
+      props.setPropertyValue("TabIndex",  Short.valueOf((short) 0));
 
       return dialogCtrl;
     }
@@ -224,7 +222,6 @@ public class Dialogs
     dialogCtrl.createPeer(xToolkit, windowParentPeer);
     // XWindowPeer peer = dialogCtrl.getPeer();
 
-    XComponent dialogComponent = Lo.qi(XComponent.class, dialogCtrl);
     XDialog dialog = getDialog(dialogCtrl);
     // dialogComponent.dispose();      // free window resources
         /* commented out or the Add-on dialog crashes when called a second time
@@ -324,7 +321,7 @@ public class Dialogs
       props.setPropertyValue("Height", 14);
       props.setPropertyValue("Width", width);
       props.setPropertyValue("Label", label);
-      props.setPropertyValue("PushButtonType", new Short((short) pushButtonType));
+      props.setPropertyValue("PushButtonType",Short.valueOf((short) pushButtonType));
       props.setPropertyValue("Name", nm);
       
       // Add the model to the dialog
@@ -377,7 +374,7 @@ public class Dialogs
       props.setPropertyValue("Name", nm);
       
       if (echoChar == '*')    // for password fields
-        props.setPropertyValue("EchoChar",  new Short((short) echoChar));
+        props.setPropertyValue("EchoChar",  Short.valueOf((short) echoChar));
       
       // Add the model to the dialog
       nameCon.insertByName(nm, model);
@@ -412,7 +409,7 @@ public class Dialogs
       props.setPropertyValue("Name", nm);
       props.setPropertyValue("Dropdown", true);
       props.setPropertyValue("StringItemList", entries);
-      props.setPropertyValue("MaxTextLen", new Short((short) 10));
+      props.setPropertyValue("MaxTextLen", Short.valueOf((short) 10));
       props.setPropertyValue("ReadOnly", false);
 
       // add the model to the dialog
@@ -449,7 +446,7 @@ public class Dialogs
       props.setPropertyValue("Name", nm);
       props.setPropertyValue("Label", label);
       props.setPropertyValue("TriState", true);
-      props.setPropertyValue("State", new Short((short) 1));
+      props.setPropertyValue("State", Short.valueOf((short) 1));
 
       // add the model to the dialog
       nameCon.insertByName(nm, model);

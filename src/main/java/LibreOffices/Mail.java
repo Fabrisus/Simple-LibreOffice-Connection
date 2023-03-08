@@ -22,7 +22,6 @@ package LibreOffices;
 import com.sun.star.beans.*;
 import com.sun.star.lang.*;
 import com.sun.star.uno.*;
-import com.sun.star.frame.*;
 
 import com.sun.star.mail.*;
 import com.sun.star.system.*;
@@ -91,11 +90,11 @@ public class Mail
           if (name.equals("ServerName"))
             return (Object) mailhost;
           else if (name.equals("Port"))
-            return (Object) new Integer(port);
+            return (Object) Integer.valueOf(port);
           else if (name.equals("ConnectionType"))
             return (Object) "Ssl";     // or "Insecure";
           else if (name.equals("Timeout"))
-            return (Object)  new Integer(60);
+            return (Object)  Integer.valueOf(60);
           System.out.println("Do not recognize \"" + name + "\"");
           return null;
         }
@@ -368,7 +367,6 @@ public class Mail
 
       public void notifyMailMergeEvent(MailMergeEvent e)
       { count++;
-        XModel model = e.Model;
         // Props.showProps("Mail merge event", model.getArgs());
         long currTime = System.currentTimeMillis();
         System.out.println("  Letter " + count + ": " +

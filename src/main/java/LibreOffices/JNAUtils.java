@@ -15,7 +15,6 @@ package LibreOffices;
 
 
 import java.awt.*;
-import java.io.*;
 import java.util.*;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
@@ -297,10 +296,6 @@ public class JNAUtils
 
     RECT rect = new RECT();
     user32ext.GetWindowRect(handle, rect);
-    if (rect == null) {
-      System.out.println("Could not find bounding rectangle");
-      return null;
-    }
   
     if ((rect.left == 0) && (rect.right == 0))  {
       System.out.println("Bounding rectangle as 0 volume");
@@ -327,9 +322,9 @@ public class JNAUtils
           Robot r = new Robot();
           r.mouseMove(clickPt.x, clickPt.y);
           Lo.delay(300);
-          r.mousePress(InputEvent.BUTTON1_MASK);
+          r.mousePress(InputEvent.BUTTON1_DOWN_MASK);
           Lo.delay(300);
-          r.mouseRelease(InputEvent.BUTTON1_MASK);
+          r.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
           r.mouseMove(oldPos.x, oldPos.y);
           System.out.println("Click completed");
         }
@@ -360,11 +355,11 @@ public class JNAUtils
           Robot r = new Robot();
           r.mouseMove(clickPt.x, clickPt.y);
           Lo.delay(300);
-          r.mousePress(InputEvent.BUTTON1_MASK);
+          r.mousePress(InputEvent.BUTTON1_DOWN_MASK);
           Lo.delay(300);
           r.mouseMove(releasePt.x, releasePt.y);
           Lo.delay(300);
-          r.mouseRelease(InputEvent.BUTTON1_MASK);
+          r.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
           r.mouseMove(oldPos.x, oldPos.y);
           // System.out.println("Drag completed");
         }
@@ -461,8 +456,6 @@ public class JNAUtils
             String handleName = getHandleName(handle);
             if (handle != null)
               System.out.println("Office (" + handleName + ") killed");
-            else
-              System.out.println("Office killed");
           }
           else
             System.out.println("Could not construct Office process handle");
